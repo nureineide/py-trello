@@ -125,6 +125,7 @@ class Card(object):
         card.due = json_obj.get('due', '')
         card.closed = json_obj['closed']
         card.url = json_obj['url']
+        card.pos = json_obj['pos']
         card.member_ids = json_obj['idMembers']
         card.idLabels = json_obj['idLabels']
         card.idList = json_obj['idList']
