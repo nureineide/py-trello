@@ -157,7 +157,7 @@ class Card(object):
         self.idLabels = json_obj['idLabels']
         self.labels = Label.from_json_list(self.board, json_obj['labels'])
         self.badges = json_obj['badges']
-        self.pos = json_obj['pos']
+        self.pos = json_obj.get('pos', None)
         if json_obj.get('due', ''):
             self.due = json_obj.get('due', '')
         else:
